@@ -1,11 +1,11 @@
-from selene import browser, have, be
+from selene import browser, have
 
 import os
 os.environ['WDM_SSL_VERIFY'] = '0'
 
 def test_student_registration_form():
 
-    browser.open('https://demoqa.com/automation-practice-form')
+    browser.open('/automation-practice-form')
     browser.execute_script('document.querySelector("#fixedban")?.remove()')
     browser.execute_script('document.querySelector("footer")?.remove()')
     browser.element('#firstName').type('Danya')
